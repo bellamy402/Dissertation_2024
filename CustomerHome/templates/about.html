@@ -1,0 +1,114 @@
+{%extends 'base.html'%} {% load static %}
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>{% block title %}Home {% endblock %}</title>
+</head>
+
+<body>
+    {% block pagecontent %} {%if Message%}
+    <div class="alert alert-warning alert-dismissible fade show my-2" role="alert">
+        <strong>{{Message}}!!</strong>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    {%endif%}
+
+    <div class="jumbotron p-5 text-white rounded bg-info" style="height:560px ">
+      <div class="col-md-6 px-0" style="margin:95px">
+        <p class="lead my-3" style="">
+          Akomar Car rental, lets you borrow a car for a little bit by paying some money, whether it's just for a few hours, a few days, or even a whole week. It's like a special kind of store that has lots of different locations, so you can borrow a car from one place and give it back to another if you need to. These places are often found near places like airports or busy parts of the city, and they usually have a website where you can book a car online. Car rental places are really helpful for people who can't use their own car for some time, like if it's broken or if they're away from home.</p>
+        {% comment %} <p class="lead mb-0"><a href="#" class="text-white font-weight-bold">Continue reading...</a></p> {% endcomment %}
+
+        <a class="btn btn-dark btn-lg" href="#123" role="button">Learn more</a>
+      </div>
+    </div>
+    <div class="p-3 mb-2  text-info" id="123">
+      <div class="row m-5" >
+          <div class="container fluid px-0"><h1 class="my-3 text-center">Why Choose Us?</h1></div>
+          <div class="col-xl-4">
+            <div class="container fluid px-0" >
+              {%load static%}
+              <img src = "{%static "trust.jpg"%}" width="300" height="300"  style=" background-color: white;border-radius: 20px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); margin-left:60px" >
+            </div>
+            <h2 class="hd my-2 " style=" text-align:center">Safe</h2>
+            <p style="font-size:20px; text-align:center">Most trustworthy website for renting a vehicle in World. All the vehicles are well maintained and in good condition. Servicing is done after every two weeks.</p>
+          
+          </div><!-- /.col-lg-4 -->
+          <div class="col-xl-4">
+            <div class="container" >
+              {%load static%}
+              <img src = "{%static "affordable.jpg"%}" width="300" height="300"  style=" background-color: white;border-radius: 20px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); margin-left:60px" >
+            </div>
+            <h2 class="hd my-2 " style=" text-align:center">Affordable Prices</h2>
+            <p style="font-size:20px ; text-align:center">All the rent are in affordable prices. If there is a problem in the vehicle, there is a return back policy. Payment can be made upon delivery </p>
+           
+          </div><!-- /.col-lg-4 -->
+          <div class="col-xl-4">
+            <div class="container-center" >
+              {%load static%}
+              <img src = "{%static "trust.jpg"%}" width="300" height="300"  style=" background-color: white;border-radius: 20px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); margin-left:60px" >
+            </div>
+            <h2 class="hd my-2" style=" text-align:center">Hygienic</h2>
+            <p style="font-size:20px ; text-align:center">Your comfort is our priority! All the vehicles are well-maintained and hygienic. </p>
+          </div><!-- /.col-lg-4 -->
+      </div>
+      </div> 
+    <footer class="site-footer" style="background-color: #26272b; padding: 45px 0 20px; font-size: 15px; line-height: 24px; color: #737373;">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-6">
+                    <h6 style="color: #fff; font-size: 16px; text-transform: uppercase; margin-top: 5px; letter-spacing: 2px;">About</h6>
+                    <p class="text-justify" style="color: #737373;"><i></i> Akomar Car is a company that rents automobiles for short period of time for a fee whether in a few hours or a few days or week. It is an elaborate form of a rental shop, often organized with numerous local branches (which allow a user to return a vehicle to a different location), and primarily 'located near airports or busy city areas and often complemented by a website allowing online reservations.</p>
+                </div>
+
+                <div class="col-xs-6 col-md-3">
+                    <h6 style="color: #fff; font-size: 16px; text-transform: uppercase; margin-top: 5px; letter-spacing: 2px;">Contact Us</h6>
+                    <ul class="footer-links" style="padding-left: 0; list-style: none;">
+                        <li><a href="http://scanfcode.com/category/c-language/" style="color: #737373;">Akomar@gmail.com</a></li>
+                        <li><a href="http://scanfcode.com/category/front-end-development/" style="color: #737373;">+232-31051515</a></li>
+                        <li><a href="http://scanfcode.com/category/back-end-development/" style="color: #737373;">+232-31985407</a></li>
+
+                    </ul>
+                </div>
+
+                <div class="col-xs-6 col-md-3">
+                    <h6 style="color: #fff; font-size: 16px; text-transform: uppercase; margin-top: 5px; letter-spacing: 2px;">Quick Links</h6>
+                    <ul class="footer-links" style="padding-left: 0; list-style: none;">
+                        <li><a href="http://scanfcode.com/about/" style="color: #737373;">About Us</a></li>
+                        <li><a href="http://scanfcode.com/contact/" style="color: #737373;">Contact Us</a></li>
+                        <li><a href="http://scanfcode.com/contribute-at-scanfcode/" style="color: #737373;">Contribute</a></li>
+                        <li><a href="http://scanfcode.com/privacy-policy/" style="color: #737373;">Privacy Policy</a></li>
+                        <li><a href="http://scanfcode.com/sitemap/" style="color: #737373;">Sitemap</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr style="border-top-color: #bbb; opacity: 0.5;">
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-sm-6 col-xs-12">
+                    <p class="copyright-text" style="margin: 0;">Copyright &copy; 2023 All Rights Reserved by
+                        <a href="#" style="color: #737373;">Group I</a>.
+                    </p>
+                </div>
+
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <ul class="social-icons" style="padding-left: 0; margin-bottom: 0; list-style: none; text-align: right;">
+                        <li style="display: inline-block; margin-bottom: 4px;"><a class="facebook" href="https://www.facebook.com/" style="background-color: #eceeef; color: #818a91; font-size: 16px; display: inline-block; line-height: 44px; width: 44px; height: 44px; text-align: center; margin-right: 8px; border-radius: 100%; -webkit-transition: all .2s linear; -o-transition: all .2s linear; transition: all .2s linear;"><i class="fa fa-facebook"></i></a></li>
+                        <li style="display: inline-block; margin-bottom: 4px;"><a class="twitter" href="https://twitter.com/?lang=en" style="background-color: #eceeef; color: #818a91; font-size: 16px; display: inline-block; line-height: 44px; width: 44px; height: 44px; text-align: center; margin-right: 8px; border-radius: 100%; -webkit-transition: all .2s linear; -o-transition: all .2s linear; transition: all .2s linear;"><i class="fa fa-twitter"></i></a></li>
+                        <li style="display: inline-block; margin-bottom: 4px;"><a class="linkedin" href="https://www.linkedin.com/" style="background-color: #eceeef; color: #818a91; font-size: 16px; display: inline-block; line-height: 44px; width: 44px; height: 44px; text-align: center; margin-right: 8px; border-radius: 100%; -webkit-transition: all .2s linear; -o-transition: all .2s linear; transition: all .2s linear;"><i class="fa fa-linkedin"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    {% endblock pagecontent %}
+    
+</body>
+
+</html>

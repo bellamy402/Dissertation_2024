@@ -1,0 +1,132 @@
+{%extends 'base.html'%} {% load static %}
+<link rel="stylesheet" href="{%static 'style.css'%}">
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>{% block title %}Home {% endblock %}</title>
+</head>
+
+<body>
+    {% block pagecontent %} {%if Message%}
+    <div class="alert alert-warning alert-dismissible fade show my-2" role="alert">
+        <strong>{{Message}}!!</strong>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    {%endif%}
+
+    <section class="h-100 gradient-form" style="background-color: #eee;">
+      <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+          <div class="col-xl-10">
+            <div class="card rounded-3 text-black">
+              <div class="row g-0">
+                <div class="card-body p-md-5 mx-md-4">
+    
+                  <div class="text-center">
+                    
+                    <h2 class="mt-1 mb-5 pb-1">Contact Us</h2>
+            
+                  </div>
+  
+                  <form method="post"  action="/contact">
+                    {%csrf_token%}
+  
+                    <div class="form-outline mb-4">
+                      <label class="form-label" for="form2Example11">Name : </label>
+                      <input type="text" id="contactname" name="contactname" class="form-control"
+                        placeholder="Name" required >
+
+                    </div>
+                    <div class="form-outline mb-4">
+                        <label class="form-label" for="form2Example11">Phone Number : </label>
+                        <input type="tel" id="contactnumber" name="contactnumber" class="form-control"
+                          placeholder="eg: 9015789452" required >
+                        
+                      </div>
+                      <div class="form-outline mb-4">
+                        <label class="form-label" for="form2Example11">Email : </label>
+                        <input type="email" id="contactemail" name="contactemail" class="form-control"
+                          placeholder="something@gmail.com" required >
+                           </div>
+                      <div class="form-outline mb-4">
+                        <label class="form-label" for="form2Example11">Message : </label>
+                        <input type="message" id="contactmsg" name="contactmsg" class="form-control "
+                          placeholder="Please Write something here" required >
+                           </div>
+                    
+  
+                    <div class="text-center pt-1 mb-5 pb-1">
+
+                        <button type="submit" class="btn btn-info btn-block fa-lg  mb-3" >Submit</button>
+                    </div>
+                  </form>
+                    
+  
+                  
+  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="site-footer" style="background-color: #26272b; padding: 45px 0 20px; font-size: 15px; line-height: 24px; color: #737373;">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-6">
+                    <h6 style="color: #fff; font-size: 16px; text-transform: uppercase; margin-top: 5px; letter-spacing: 2px;">About</h6>
+                    <p class="text-justify" style="color: #737373;"><i></i> Akomar Car is a company that rents automobiles for short period of time for a fee whether in a few hours or a few days or week. It is an elaborate form of a rental shop, often organized with numerous local branches (which allow a user to return a vehicle to a different location), and primarily 'located near airports or busy city areas and often complemented by a website allowing online reservations.</p>
+                </div>
+
+                <div class="col-xs-6 col-md-3">
+                    <h6 style="color: #fff; font-size: 16px; text-transform: uppercase; margin-top: 5px; letter-spacing: 2px;">Contact Us</h6>
+                    <ul class="footer-links" style="padding-left: 0; list-style: none;">
+                        <li><a href="http://scanfcode.com/category/c-language/" style="color: #737373;">Akomar@gmail.com</a></li>
+                        <li><a href="http://scanfcode.com/category/front-end-development/" style="color: #737373;">+232-31051515</a></li>
+                        <li><a href="http://scanfcode.com/category/back-end-development/" style="color: #737373;">+232-31985407</a></li>
+
+                    </ul>
+                </div>
+
+                <div class="col-xs-6 col-md-3">
+                    <h6 style="color: #fff; font-size: 16px; text-transform: uppercase; margin-top: 5px; letter-spacing: 2px;">Quick Links</h6>
+                    <ul class="footer-links" style="padding-left: 0; list-style: none;">
+                        <li><a href="http://scanfcode.com/about/" style="color: #737373;">About Us</a></li>
+                        <li><a href="http://scanfcode.com/contact/" style="color: #737373;">Contact Us</a></li>
+                        <li><a href="http://scanfcode.com/contribute-at-scanfcode/" style="color: #737373;">Contribute</a></li>
+                        <li><a href="http://scanfcode.com/privacy-policy/" style="color: #737373;">Privacy Policy</a></li>
+                        <li><a href="http://scanfcode.com/sitemap/" style="color: #737373;">Sitemap</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr style="border-top-color: #bbb; opacity: 0.5;">
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-sm-6 col-xs-12">
+                    <p class="copyright-text" style="margin: 0;">Copyright &copy; 2023 All Rights Reserved by
+                        <a href="#" style="color: #737373;">Group I</a>.
+                    </p>
+                </div>
+
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <ul class="social-icons" style="padding-left: 0; margin-bottom: 0; list-style: none; text-align: right;">
+                        <li style="display: inline-block; margin-bottom: 4px;"><a class="facebook" href="https://www.facebook.com/" style="background-color: #eceeef; color: #818a91; font-size: 16px; display: inline-block; line-height: 44px; width: 44px; height: 44px; text-align: center; margin-right: 8px; border-radius: 100%; -webkit-transition: all .2s linear; -o-transition: all .2s linear; transition: all .2s linear;"><i class="fa fa-facebook"></i></a></li>
+                        <li style="display: inline-block; margin-bottom: 4px;"><a class="twitter" href="https://twitter.com/?lang=en" style="background-color: #eceeef; color: #818a91; font-size: 16px; display: inline-block; line-height: 44px; width: 44px; height: 44px; text-align: center; margin-right: 8px; border-radius: 100%; -webkit-transition: all .2s linear; -o-transition: all .2s linear; transition: all .2s linear;"><i class="fa fa-twitter"></i></a></li>
+                        <li style="display: inline-block; margin-bottom: 4px;"><a class="linkedin" href="https://www.linkedin.com/" style="background-color: #eceeef; color: #818a91; font-size: 16px; display: inline-block; line-height: 44px; width: 44px; height: 44px; text-align: center; margin-right: 8px; border-radius: 100%; -webkit-transition: all .2s linear; -o-transition: all .2s linear; transition: all .2s linear;"><i class="fa fa-linkedin"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    {% endblock pagecontent %}
+    
+</body>
+
+</html>
